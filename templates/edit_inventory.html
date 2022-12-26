@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Define the style for the side panel */
+      .side-panel {
+        background-color: #333;
+        color: #fff;
+        width: 200px;
+        position: fixed;
+        height: 100%;
+        left: 0;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+      }
+
+      /* Style the buttons in the side panel */
+      .side-panel button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+        padding: 14px 16px;
+        transition: 0.3s;
+      }
+
+      /* Add hover effect to the buttons */
+      .side-panel button:hover {
+        background-color: #444;
+      }
+
+      /* Style the main content */
+      .main {
+        margin-left: 200px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="side-panel">
+      <!-- Add supplier button -->
+      <a href="/add_supplier">
+        <button>Add supplier</button>
+      </a>
+      <!-- Remove supplier button -->
+      <a href="/remove_supplier">
+        <button>Remove supplier</button>
+      </a>
+      <!-- Edit inventory button -->
+      <a href="/edit_inventory">
+        <button>Edit inventory</button>
+      </a>
+      <!-- Register staff button -->
+      <a href="/register_staff">
+        <button>Register staff</button>
+      </a>
+      <!-- Remove staff button -->
+      <a href="/remove_staff">
+        <button>Remove staff</button>
+      </a>
+      <!-- Show sales button -->
+      <a href="/show_sales">
+        <button>Show sales</button>
+      </a>
+    </div>
+    <div class="main">
+      <!-- add_supplier.html -->
+      <form method="POST" action="/add_supplier">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" /><br />
+        <!-- additional form fields for adding supplier -->
+      </form>
+    </div>
+  </body>
+</html>
