@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        background: linear-gradient(to top left, #33ccff 0%, #ff99cc 100%);
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+        background-color: white;
+        border-radius: 25px;
+        border-right: medium;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        position: relative;
+        border-radius: 16px;
+        top: 20;
+        font-family: arial;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      label {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-family: arial;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 60%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      p {
+        color: red;
+        margin-bottom: 20px;
+      }
+      .login {
+        font-family: georgia;
+      }
+    </style>
+  </head>
+  <body style="width: 100vw; height: 100vh">
+    <div class="container" style="position: relative; top: 9rem">
+      {% if error %}
+      <p>{{ error }}</p>
+      {% endif %}
+      <h1 class="login">LOGIN&nbsp;</h1>
+      <form action="{{url_for('login')}}" method="POST">
+        <label for="username" style="font-family: arial">Username</label>
+        <input type="text" name="username" id="username" />
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+  </body>
+</html>

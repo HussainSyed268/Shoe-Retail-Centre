@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Total Sales</th>
+  </tr>
+  {% for sale in sales %}
+  <tr>
+    <td>{{ sale.date }}</td>
+    <td>{{ sale.total }}</td>
+  </tr>
+  {% endfor %}
+</table>
